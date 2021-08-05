@@ -20,11 +20,11 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
 
     this.leaderService.getFeaturedLeader()
-      .then((leader) => this.featuredLeader = leader);
+    .subscribe((leader) => this.featuredLeader = leader);
 
 
     this.leaderService.getLeaders()
-      .then( (leaders) => this.leaders = leaders);
+    .subscribe( (leaders) => this.leaders = leaders);
   }
 
 }
